@@ -1,23 +1,23 @@
-const books = require('./books')
+const books = require('./books');
 
-const print = result => console.log('Result:', result)
+const print = result => console.log('Result:', result);
 
 const filterBooksWithTitleStartingWithA = (sortedBooks, callback) => {
-  let filteredBooks
+  let filteredBooks;
   /* filter logic here */
-  return callback(filteredBooks)
-}
+  return callback(filteredBooks);
+};
 
 const sortBooksAlphabetically = (books, callback) => {
-  let sortedBooks
+  let sortedBooks;
   /* sorting logic books */
-  return callback(sortedBooks, print)
-}
+  return callback(sortedBooks, print);
+};
 
 const getBooksAsync = (callback) => {
   setTimeout(() => {
-    callback(books, filterBooksWithTitleStartingWithA)
-  }, 2000)
-}
+    callback(books, filterBooksWithTitleStartingWithA);
+  }, 2000);
+};
 
-getBooksAsync(sortBooksAlphabetically)
+getBooksAsync(sortBooksAlphabetically);
